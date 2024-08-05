@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Project Management Tool</h1>
+
+    <!-- User Registration/Login -->
+    <section>
+        <h2>Register</h2>
+        <form id="registerForm">
+            <label for="registerUsername">Username:</label>
+            <input type="text" id="registerUsername" name="username" required>
+            <label for="registerPassword">Password:</label>
+            <input type="password" id="registerPassword" name="password" required>
+            <label for="registerEmail">Email:</label>
+            <input type="email" id="registerEmail" name="email" required>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" name="username" required>
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Projects Section -->
+    <section>
+        <h2>Create Project</h2>
+        <form id="projectForm">
+            <label for="projectName">Project Name:</label>
+            <input type="text" id="projectName" name="name" required>
+            <button type="submit">Create Project</button>
+        </form>
+
+        <h2>Projects List</h2>
+        <div id="projectsList"></div>
+    </section>
+
+    <!-- Tasks Section -->
+    <section>
+        <h2>Create Task</h2>
+        <form id="taskForm">
+            <label for="taskName">Task Name:</label>
+            <input type="text" id="taskName" name="name" required>
+            <label for="projectSelect">Select Project:</label>
+            <select id="projectSelect" name="projectId" required></select>
+            <label for="assignedTo">Assign To (User ID):</label>
+            <input type="text" id="assignedTo" name="assignedTo">
+            <button type="submit">Add Task</button>
+        </form>
+
+        <h2>Tasks List</h2>
+        <div id="tasksList"></div>
+    </section>
+
+    <!-- Comments Section -->
+    <section>
+        <h2>Add Comment</h2>
+        <form id="commentForm">
+            <label for="commentContent">Comment:</label>
+            <input type="text" id="commentContent" name="content" required>
+            <!-- <label for="taskSelect">Select Task:</label>
+            <select id="taskSelect" name="taskId" required></select> -->
+            <label for="userId">User ID:</label>
+            <input type="text" id="userId" name="userId" required>
+            <button type="submit">Add Comment</button>
+        </form>
+
+        <h2>Comments List</h2>
+        <div id="commentsList"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
